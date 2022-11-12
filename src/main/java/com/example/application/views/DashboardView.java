@@ -1,4 +1,4 @@
-package com.example.application.views;
+/* package com.example.application.views;
 
 import javax.annotation.security.PermitAll;
 
@@ -41,4 +41,4 @@ public class DashboardView extends VerticalLayout {
         chart.getConfiguration().setSeries(dataSeries);
         return chart;
     }
-}
+} */

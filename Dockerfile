@@ -24,6 +24,11 @@ RUN mvn clean package -DskipTests -Pproduction
 
 # Running stage: the part that is used for running the application
 FROM openjdk:17-jdk-slim
+
+ENV DB_URL="jdbc:postgresql://localhost:5432/flowcrm" \
+    DB_USER="shibug" \
+    DB_PASSWORD="password"
+
 COPY --from=build /usr/src/app/target/*.jar /usr/app/app.jar
 RUN useradd -m myuser
 USER myuser
